@@ -66,3 +66,17 @@ LOGGING = {
 # Email debug settings (temporär)
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_DEBUG = True
+
+
+# Celery Settings
+CELERY_BROKER_URL = 'amqp://localhost'
+CELERY_RESULT_BACKEND = 'rpc://'
+CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True  # Diese Zeile ist wichtig
+CELERY_BROKER_CONNECTION_RETRY = True
+
+# Weitere Celery-Einstellungen für bessere Stabilität
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TIMEZONE = 'Europe/Berlin'
+CELERY_ENABLE_UTC = True
