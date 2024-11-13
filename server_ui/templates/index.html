@@ -46,7 +46,7 @@ More than <b>2,000,000 votes</b> have been cast using Helios.
     {% endfor %}
   </p>
   {% else %}
-  <h4>no featured elections at the moment</h4>
+  <h4>Zurzeit sind keine Wahlen vorgesehen.</h4>
   {% endif %}
 {% endif %}
   
@@ -58,8 +58,8 @@ More than <b>2,000,000 votes</b> have been cast using Helios.
 {% if user %}
 <!--<div class="row right">{{user.display_html_big|safe}}</div>-->
 {% if create_p %}
-<a class="small button" href="{% url "elections@new" %}">create election</a>
-<h5 class="subheader">Administration</h5>
+<a class="small button" href="{% url "elections@new" %}">Wahl erstellen</a>
+<h5 class="subheader">Verwaltung</h5>
 {% if elections_administered %}
 <ul>
 {% for election in elections_administered %}
@@ -70,12 +70,12 @@ More than <b>2,000,000 votes</b> have been cast using Helios.
 <em>none yet</em>
 {% endif %}
 <div class="row right">
-<a class="tiny button" href="{% url "elections@administered" %}">see all</a>
+<a class="tiny button" href="{% url "elections@administered" %}">alle anzeigen</a>
 </div>
 <div class="row"></div>
 {% endif %}
 
-<h5 class="subheader">Recent Votes</h5>
+<h5 class="subheader">Neuste Stimmabgaben</h5>
 {% if elections_voted %}
 <ul>
 {% for election in elections_voted %}
@@ -89,12 +89,11 @@ More than <b>2,000,000 votes</b> have been cast using Helios.
 <div class="row"></div>
 {% else %}
 {% if settings.SHOW_LOGIN_OPTIONS %}
-<h5>Log In to Start Voting</h5>
+<h5>Anmelden, um die Abstimmung zu beginnen</h5>
 {{login_box|safe}}
 {% else %}
 <p>
-Select an election to start voting. You will be asked for your voting credentials after you complete a ballot.
-</p>
+Wählen Sie eine Wahl aus, um mit der Stimmabgabe zu beginnen. Nachdem Sie den Stimmzettel ausgefüllt haben, werden Sie nach Ihren Wahlberechtigungsnachweisen gefragt.</p>
 {% endif %}
 {% endif %}
 </div>

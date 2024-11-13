@@ -2,16 +2,16 @@
 {% block title %}Confirm Vote{% endblock %}
 
 {% block content %}
-<h1>Your Vote was Cast</h1>
+<h1>Deine Stimme wurde erfolgreich abgegeben!</h1>
 
 <p>
-    A vote was successfully cast for <b>{{voter.voter_id}}</b>, with vote fingerprint:
+    Eine Stimme wurde erfolgreich abgegeben für <b>{{voter.voter_id}}</b>, mit dem hash:
     <br /><br />
     <tt style="font-size: 2em;">{{voter.vote_hash}}</tt>
 </p>
 
 <p>
-    Visit the <a href="{% url "election@view" election.uuid %}">election homepage</a>.
+    Gehe zur <a href="{% url "election@view" election.uuid %}">Wahl Homepage</a>.
 </p>
 
 {% endblock %}
