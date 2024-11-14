@@ -1,34 +1,34 @@
-Dear {{voter.name}},
+Liebe*r {{voter.name}},
 
 {{custom_message|safe}}
 
-Election URL (click to begin voting):
+Wahl-URL (klicke hier um abzustimmen):
 {{election_vote_url}}
 
 {% if voter.voter_type == "password" %}
-Your voter ID: {{voter.voter_login_id}}
-Your password: {{voter.voter_password}}
+Deine Wähler-ID: {{voter.voter_login_id}}
+Dein Passwort: {{voter.voter_password}}
 {% else %}
-Log in with your {{voter.voter_type}} account.
+Melde dich mit deinem {{voter.voter_type}}-Konto an.
 {% endif %}{% if voter.vote_hash %}
-We have recorded your vote with ballot tracker:
+Wir haben deine Stimme mit folgendem Stimmzettel-Hash erfasst:
 
   {{voter.vote_hash}}
 
-You may re-vote if you wish: only your last vote counts.
+Du kannst erneut abstimmen, wenn du möchtest: nur deine letzte Stimme zählt.
 {% endif %}{% if election.use_voter_aliases %}
-In order to protect your privacy, this election is configured
-to never display your voter login ID, name, or email address to the public.
-Instead, the ballot tracking center will only display your alias.
+Um deine Privatsphäre zu schützen, ist diese Wahl so eingerichtet,
+dass deine Wähler-ID, dein Name oder deine E-Mail-Adresse nie öffentlich angezeigt werden.
+Stattdessen wird im Stimmzettel-Tracking nur dein Alias angezeigt.
 
-Your voter alias is {{voter.alias}}.
+Dein Wähler-Alias ist {{voter.alias}}.
 
-IMPORTANTLY, when you are prompted to log in to vote,
-please use your *voter ID*, not your alias.
+WICHTIG: Wenn du dich zum Abstimmen anmeldest,
+verwende bitte deine *Wähler-ID*, nicht deinen Alias.
 {% endif %}
 
-You may wish to verify the election fingerprint at the bottom of
-the screen when you vote:  {{voter.election.hash}}
+Du kannst deinen Stimmzettel-Hash unten in der Wahlbox überprüfen,
+wenn du abstimmst: {{voter.election.hash}}
 
 --
-Helios
+AStA Hfmdk
