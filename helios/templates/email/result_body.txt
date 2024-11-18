@@ -1,19 +1,19 @@
-Liebe*r {{voter.name}},
+Dear {{voter.name}},
 
-Die Stimmauszählung für {{election.name}} wurde durchgeführt und veröffentlicht:
+The tally for {{election.name}} has been computed and released:
 
   {{election_url}}
 
 {{custom_message|safe}}
 
-{% if voter.vote_hash %}Dein Stimmzettel-Hash für diese Wahl lautete:
+{% if voter.vote_hash %}Your ballot tracker in this election was:
 
   {{voter.vote_hash}}
 
-Falls Du der Meinung bist, dass dieser Code nicht korrekt ist, kontaktiere uns bitte.
+If you believe this tracker to be in error, please contact us.
 {% else %}
-Es scheint, dass Du bei dieser Wahl keine Stimme abgegeben hast. :(
-Bitte kontaktiere uns, falls Du anderer Meinung sind.
+It appears you did not cast a vote in this election.
+Please contact us if you believe you did.
 {% endif %}
 --
-AStA Hfmdk
+Helios

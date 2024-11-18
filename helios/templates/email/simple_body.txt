@@ -1,14 +1,14 @@
-Liebe*r {{voter.name}},
+Dear {{voter.name}},
 
 {{custom_message|safe}}
 
 ========
-Hier kannst Du abstimmen:
+How to Vote
 
-Wahl-URL: {{election_vote_url}}
+Election URL:  {{election_vote_url}}
 {% if voter.voter_type == "password" %}
-Deine Wähler-ID: {{voter.voter_login_id}}
-Dein Passwort: {{voter.voter_password}}
+Your voter ID: {{voter.voter_login_id}}
+Your password: {{voter.voter_password}}
 {% else %}
-Melde dich mit deinem {{voter.voter_type}}-Konto an.
+Log in with your {{voter.voter_type}} account.
 {% endif %}
