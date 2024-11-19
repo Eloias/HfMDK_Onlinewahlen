@@ -22,8 +22,8 @@ SECRET_KEY = 'TR6v3XQx6kdBgwR-P9Jr437_CyOXH-gRRswb-UxXS9AzjEfT3HePtX5IfebkBxdQ'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Basis-URL Ihrer Installation
-URL_HOST = "http://192.168.0.169:8000"
-SECURE_URL_HOST = "http://192.168.0.169:8000"  # Die lokale IP
+URL_HOST = "http://localhost:8000"
+SECURE_URL_HOST = "http://localhost:8000"
 
 # Für Entwicklung
 SECURE_SSL_REDIRECT = False
@@ -32,7 +32,7 @@ SESSION_COOKIE_SECURE = False
 HELIOS_VOTERS_UPLOAD = True  # Stellen Sie sicher, dass dies auf True gesetzt ist
 HELIOS_VOTERS_EMAIL = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.1.169', '192.168.0.169' '192.168.0.169:8000']  # Ihre IP eintragen
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '192.168.0.169', 'onlinewahlen-hfmdk.de']
 
 
 LOGGING = {

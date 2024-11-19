@@ -46,7 +46,7 @@ More than <b>2,000,000 votes</b> have been cast using Helios.
     {% endfor %}
   </p>
   {% else %}
-  <h4>Zurzeit sind keine Wahlen vorgesehen.</h4>
+  <h4>Hier als Admin anmelden! die URL um in einer Wahl abzustimmen, ist eine andere. Diese wird per Email verschickt. Keine Wahl vorgesehen. </h4>
   {% endif %}
 {% endif %}
   
@@ -89,7 +89,7 @@ More than <b>2,000,000 votes</b> have been cast using Helios.
 <div class="row"></div>
 {% else %}
 {% if settings.SHOW_LOGIN_OPTIONS %}
-<h5>Anmelden, um die Abstimmung zu beginnen</h5>
+<h5>Als ADMIN anmelden, um die Abstimmung zu beginnen</h5>
 {{login_box|safe}}
 {% else %}
 <p>
