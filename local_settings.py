@@ -22,8 +22,8 @@ SECRET_KEY = 'TR6v3XQx6kdBgwR-P9Jr437_CyOXH-gRRswb-UxXS9AzjEfT3HePtX5IfebkBxdQ'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Basis-URL Ihrer Installation
-URL_HOST = "http://localhost:8000"
-SECURE_URL_HOST = "http://localhost:8000"
+URL_HOST = "http://192.168.0.169:8000"
+SECURE_URL_HOST = "http://192.168.0.169:8000"
 
 # Für Entwicklung
 SECURE_SSL_REDIRECT = False
